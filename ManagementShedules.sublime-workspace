@@ -1,0 +1,838 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"preven",
+				"preventDefault()	jquery-2.0.2.js"
+			],
+			[
+				"Servicio",
+				"ServicioEmpresarial"
+			],
+			[
+				"id",
+				"id_turno"
+			],
+			[
+				"_P",
+				"_POST"
+			],
+			[
+				"fecha",
+				"fecha_inicial  (variable)"
+			],
+			[
+				"model",
+				"model_programa_ejercicios_ejercicios"
+			],
+			[
+				"datos",
+				"datos_ejercicios"
+			],
+			[
+				"listado",
+				"listado_repeticiones_ejercicios"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"model_dao",
+				"model_datos_extra_usuario"
+			],
+			[
+				"model_antecen",
+				"model_antecedentes_patologicos"
+			],
+			[
+				"model_ante",
+				"model_antecedentes_trauma_lesion"
+			],
+			[
+				"model_antec",
+				"model_antecedentes_ginecobstetricos"
+			],
+			[
+				"Medi",
+				"MedidasFisicas"
+			],
+			[
+				"Antecde",
+				"AntecedentesGinecobstetricos"
+			],
+			[
+				"Anteced",
+				"AntecedentesDeportivos"
+			],
+			[
+				"Antecede",
+				"AntecedentesGinecobstetricos"
+			],
+			[
+				"lisa",
+				"listado_enfermedades"
+			],
+			[
+				"lis",
+				"listado_enfermedades"
+			],
+			[
+				"campo",
+				"campo_oculto"
+			],
+			[
+				"enfermedades",
+				"enfermedades_json"
+			],
+			[
+				"enfermed",
+				"enfermedades_json"
+			],
+			[
+				"getDat",
+				"ajaxGetDatosExtraUsuario"
+			],
+			[
+				"dato",
+				"datos_extra_usuario"
+			],
+			[
+				"dat",
+				"datos_extra_usuario"
+			],
+			[
+				"idD",
+				"idAntecedentes_deportivos  (variable)"
+			],
+			[
+				"Datos",
+				"DatosExtraUsuario"
+			],
+			[
+				"Examen",
+				"ExamenFisico"
+			],
+			[
+				"AntecedentesTra",
+				"AntecedentesTraumaLesion"
+			],
+			[
+				"Antece",
+				"AntecedentesDeportivos"
+			],
+			[
+				"js",
+				"json_data"
+			],
+			[
+				"jso",
+				"json_encode  (function)"
+			],
+			[
+				"ajaxBuscar",
+				"ajaxBuscarAntecedentesImportantes(obj)	Miscelaneaus.js"
+			],
+			[
+				"arra",
+				"array_datos"
+			],
+			[
+				"get",
+				"getFactoresDeRiesgo  (function)"
+			],
+			[
+				"ries",
+				"riesgo_cardiovascular"
+			],
+			[
+				"model_tra",
+				"model_trabajo_estiramiento"
+			],
+			[
+				"Trabajo",
+				"TrabajoEstiramiento"
+			],
+			[
+				"Trabaj",
+				"TrabajoCardiovascular"
+			],
+			[
+				"Tra",
+				"TrabajoCardiovascular"
+			],
+			[
+				"ins",
+				"instructor"
+			],
+			[
+				"nombre",
+				"nombre_completo"
+			],
+			[
+				"va",
+				"value	@value"
+			],
+			[
+				"act",
+				"actualizar"
+			],
+			[
+				"model_",
+				"model_antecedentes_usuario"
+			],
+			[
+				"modelos",
+				"modelos_secundarios"
+			],
+			[
+				"cedu",
+				"cedula_usuario"
+			],
+			[
+				"Im",
+				"ImprimirDocumentos  (class)"
+			],
+			[
+				"listad",
+				"listado_planes_entrenamiento_libres"
+			],
+			[
+				"plane",
+				"planes_libres"
+			],
+			[
+				"Progra",
+				"ProgramaEjerciciosHasEnfermedad"
+			],
+			[
+				"Programa",
+				"ProgramaEjerciciosHasEnfermedad  (class)"
+			],
+			[
+				"idP",
+				"idPlan_entrenamiento  (variable)"
+			],
+			[
+				"model_trb",
+				"model_trabajo_estiramiento"
+			],
+			[
+				"model_trab",
+				"model_trabajo_cardiovascular"
+			],
+			[
+				"idV",
+				"idValoracion_funcional"
+			],
+			[
+				"vf",
+				"vf_disponibles"
+			],
+			[
+				"model_traba",
+				"model_trabajo_estiramiento"
+			],
+			[
+				"ante",
+				"antecedentes_usuario"
+			],
+			[
+				"CActive",
+				"CActiveDataProvider"
+			],
+			[
+				"idHis",
+				"idHistoria_GYM"
+			],
+			[
+				"idH",
+				"idHistoria_GYM  (variable)"
+			],
+			[
+				"model_antece",
+				"model_antecedentes_patologicos_enfermedad"
+			],
+			[
+				"model_examen",
+				"model_examen"
+			],
+			[
+				"str",
+				"str_enfermedades"
+			],
+			[
+				"css",
+				"css( name, value )	jquery.js"
+			],
+			[
+				"control",
+				"controller_ex"
+			],
+			[
+				"contro",
+				"controller_ex"
+			],
+			[
+				"Exam",
+				"ExamenController  (class)"
+			],
+			[
+				"model_antecede",
+				"model_antecedentes_trauma_lesion"
+			],
+			[
+				"idEva",
+				"idEvaluacion_medica  (variable)"
+			],
+			[
+				"tele",
+				"telefono_usuario"
+			],
+			[
+				"dire",
+				"direccion_residencia_usuario"
+			],
+			[
+				"Dat",
+				"DatosExtraUsuario  (class)"
+			],
+			[
+				"CI",
+				"cita"
+			],
+			[
+				"nom",
+				"nombre_completo"
+			],
+			[
+				"arr",
+				"arr_s"
+			],
+			[
+				"fget",
+				"fgets  (function)"
+			],
+			[
+				"wi",
+				"width:   (property)"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
+				"mari",
+				"margin-left"
+			],
+			[
+				"func",
+				"funcionarios"
+			],
+			[
+				"sty",
+				"style	@style"
+			],
+			[
+				"fun",
+				"_funcionario"
+			],
+			[
+				"id_ar",
+				"id_area_en_nomina"
+			],
+			[
+				"are",
+				"areas_evaluadoras"
+			],
+			[
+				"funci",
+				"funcionario"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"area",
+				"areas_evaluadoras"
+			],
+			[
+				"areas",
+				"areas_evaluadoras"
+			],
+			[
+				"ARE",
+				"areas_evaluadoras"
+			],
+			[
+				"aras",
+				"areas_evaluadoras"
+			],
+			[
+				"hi",
+				"hidden	@=hidden"
+			],
+			[
+				"con",
+				"contenedor_areas"
+			],
+			[
+				"ele",
+				"element2_html"
+			],
+			[
+				"si",
+				"size:   (property)"
+			],
+			[
+				"font",
+				"font-family:   (property)"
+			],
+			[
+				"text",
+				"textField"
+			],
+			[
+				"tex",
+				"textField"
+			],
+			[
+				"condi",
+				"condition"
+			],
+			[
+				"fe",
+				"fechaingreso"
+			],
+			[
+				"num",
+				"num_dias"
+			],
+			[
+				"data",
+				"data_provider"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Snippet: row",
+				"Snippet: row-fluid"
+			],
+			[
+				"Snippet: ro",
+				"Snippet: row-fluid"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packge",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"packlag",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"snipet:ht",
+				"Snippet: html"
+			],
+			[
+				"snipp",
+				"Snippet: html"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"paclage",
+				"Package Control: Install Package"
+			],
+			[
+				":html",
+				"Snippet: html"
+			],
+			[
+				"aackag",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"packiag",
+				"Package Control: Install Package"
+			],
+			[
+				"paclkage",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 712.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/rockerFEDORA/Dropbox/Mis Proyectos/ManagamentShedules/app/js/backbone/models/calendar.js",
+		"/home/rockerFEDORA/Dropbox/Mis Proyectos/ManagamentShedules/app/js/backbone/views/newcalendar.js",
+		"/home/rockerFEDORA/Dropbox/Mis Proyectos/ManagamentShedules/app/js/backbone/routers/navbar.js",
+		"/home/rockerFEDORA/Dropbox/Mis Proyectos/ManagamentShedules/app/js/main.js",
+		"/home/rockerFEDORA/Dropbox/Mis Proyectos/ManagamentShedules/index.html",
+		"/C/xampp/htdocs/ManagamentShedules/public/templates/tpl_calendar.html",
+		"/C/xampp/htdocs/ManagamentShedules/app/tpl_calendar.txt",
+		"/C/xampp/htdocs/ManagamentShedules/app/tpl_calendar.html",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/main.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/app/views/index.html",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/backbone/routers/base.js",
+		"/C/xampp/htdocs/ManagamentShedules/app/js/init.js",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/groundwork-master/templates/layout-1.html",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/bootstrap/js/bootstrap.js",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/groundwork-master/css/groundwork.css",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/groundwork-master/README.md",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/groundwork-master/css/groundwork-ie.css",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/groundwork-master/css/no-svg.css",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/groundwork-master/css/placeholder_polyfill.css",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/groundwork-master/src/scss/base/_grid.scss",
+		"/C/xampp/htdocs/ManagamentShedules/public/css/foundation-4.2.1/css/foundation.css",
+		"/C/xampp/htdocs/ManagamentShedules/app/js/vendors/backbone.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/turno/create.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/init.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/main.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/views/campotexto.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/turno/_form.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/utils/turno.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/controllers/TurnoController.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/models/horario.js",
+		"/C/xampp/htdocs/AppSolicitudes/protected/config/main.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/controllers/SiteController.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/secretaria/views/solicitudes/admin.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/secretaria/controllers/SolicitudesController.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/models/Empleados.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/secretaria/views/default/index.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/secretaria/controllers/DefaultController.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/secretaria/controllers/RespuestasController.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/secretaria/views/solicitudes/_form.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/secretaria/views/solicitudes/update.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/script.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/backbone/views/articleNew.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/backbone/views/article.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/backbone/views/articleExtended.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/backbone/models/article.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/init.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/package.json",
+		"/C/xampp/htdocs/AppGestionHorarios/js/collections/horarios.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/collections/actividades.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/utils/uturnos.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/controllers/ActividadController.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/actividad/_form.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/actividad/create.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/collections/programaciones.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/job_programacion.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/js/backbone/collections/articles.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/models/actividad.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/models/Calendario.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/controllers/ProgramacionController.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/models/Actividad.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/programacion/create.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/models/programacion.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/programacion/_form.php",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase6/public/app.min.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase5/public/js/main.js",
+		"/C/Users/rockerW7/Desktop/Cursos Mejorandola/MejorandoCurso-master/Frontend/Clase5/index.html",
+		"/C/xampp/htdocs/AppGestionHorarios/js/programacion.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/models/clasegrupal.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/models/Programacion.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/turno/admin.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/models/Horario.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/models/servicioempresarial.js",
+		"/C/xampp/htdocs/AppGestionHorarios/js/_models.js",
+		"/C/xampp/htdocs/AppGestionHorarios/assets/755a0973/gridview/jquery.yiigridview.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/actividad/admin.php",
+		"/C/xampp/htdocs/PHPTraining/index_imagen.php",
+		"/C/xampp/htdocs/AppGestionHorarios/js/script_programacion.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/layouts/main.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/programacion/admin.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/extensions/bootstrap/widgets/TbGridView.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/models/TurnoHasHorario.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/config/main.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/views/layouts/main.php",
+		"/C/xampp/htdocs/AppGymHC/js/Miscelaneaus.js",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/calendario/admin.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/components/IProgramacion.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/views/turno/update.php",
+		"/C/xampp/htdocs/AppGestionHorarios/protected/models/Turno.php",
+		"/C/xampp/htdocs/AppGestionHorarios/themes/bootstrap/views/layouts/main.php",
+		"/C/xampp/htdocs/AppGymHC/AppGymHC.sublime-project",
+		"/C/xampp/htdocs/AppGymHC/.gitignore",
+		"/C/xampp/htdocs/AppGymHC/protected/modules/fisioterapeuta/views/valoracionFuncional/_form.php",
+		"/C/xampp/htdocs/AppGymHC/protected/modules/secretaria/views/default/index.php",
+		"/C/xampp/htdocs/AppGymHC/protected/extensions/fullcalendar/FullcalendarWidget.php",
+		"/C/xampp/htdocs/AppGymHC/protected/extensions/fullcalendar/FullcalendarGraphWidget.php",
+		"/C/Users/rockerW7/Desktop/MSSQL_ER.sql",
+		"/C/xampp/htdocs/AppGymHC/protected/config/main.php",
+		"/C/Users/rockerW7/Documents/Archivos Comfenalco/Documentos ingdiaz/Proyectos/GymHC/Base de datos/GymHC-MSSQL.sql",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/admin/views/prioridades/_form.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/admin/views/prioridades/admin.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/modules/admin/views/prioridades/view.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/models/Prioridades.php",
+		"/C/Users/rockerW7/Documents/Archivos Comfenalco/Documentos ingdiaz/Proyectos/AppSolicitudes/src/AppSolicitudes/branches/0.7/protected/models/Prioridades.php",
+		"/C/xampp/htdocs/AppSolicitudes/protected/models/Puntajes.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/config/main.php",
+		"/C/xampp/htdocs/AppGymHC/trunk/trunk_0.7/protected/config/main.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/components/Controller.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/medico/views/evaluacionMedica/_form.php",
+		"/C/Users/rockerW7/Desktop/ER_min.sql",
+		"/C/Users/rockerW7/Desktop/eded.sql",
+		"/C/Users/rockerW7/Desktop/5555555.sql",
+		"/C/Users/rockerW7/Desktop/ASA.sql",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/medico/controllers/EvaluacionMedicaController.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/js/Miscelaneaus.js",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/models/Cita.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/administrador/controllers/EmpleadoController.php",
+		"/C/Users/rockerW7/Desktop/CMCCCF4320130211",
+		"/C/Validator/LogValidator",
+		"/C/Users/rockerW7/Documents/NetBeansProjects/RUAF_modificado/ERRORES20130211.txt",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/instructor/controllers/EjercicioController.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/instructor/views/programaEjercicios/_form.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/instructor/controllers/ProgramaEjerciciosController.php",
+		"/C/Users/rockerW7/Documents/NetBeansProjects/RUAF/branches/DesktopRuaf/dist/README.TXT",
+		"/C/Users/rockerW7/Desktop/KumbiaPHP-master/core/libs/event/hook.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/models/Rutina.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/models/ProgramaEjerciciosHasEnfermedad.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/instructor/views/programaEjercicios/view.php",
+		"/C/xampp/htdocs/AppGymHC/branches/branches_0.5/protected/modules/instructor/views/programaEjercicios/create.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"$model",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"window",
+			"addclass",
+			"grid-view",
+			"type",
+			"refreshHorarios",
+			"int NOT NULL",
+			"model_programa_ejercicios_ejercicios",
+			"value",
+			");\n",
+			"data",
+			".*/",
+			"array_enfermedades",
+			"xxx",
+			"new",
+			"“",
+			"id_valoracion_funcional",
+			";\n",
+			"nombre_usuario",
+			"new",
+			"docdocumentotemp",
+			"`docdocumentotemp`\n",
+			"docdocumentotemp\n",
+			"\")\n",
+			"');\n",
+			"extensions",
+			"                }",
+			"idVUsuario",
+			"Seleccione una opcion",
+			"disabled",
+			"getPerfil",
+			"(){\n",
+			"IDENTIY",
+			"/*!",
+			"model_examen",
+			"model",
+			"();\n",
+			"()))",
+			"FontSizePt",
+			"Tarjeta",
+			"numtrans",
+			"areas",
+			"span9",
+			"print_r",
+			"NIT_M",
+			"id_area_evaluadora",
+			"app",
+			"();\n",
+			"areas",
+			"false",
+			"$model_detallemante",
+			"time",
+			"Deporte",
+			"num_dias",
+			"fechamant",
+			"Name",
+			"name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"int NOT NULL IDENTITY (1,1)",
+			"`docdocumentofinal`",
+			"docdocumentofinal",
+			"IDENTITY",
+			"get",
+			"$model",
+			"Detallemante"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 64.0
+	},
+	"output.jsconsole_view":
+	{
+		"height": 0.0
+	},
+	"output.jshint_view":
+	{
+		"height": 0.0
+	},
+	"output.phpdocumentor":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/xampp/htdocs/AppSolicitudes/AppSolicitudes.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true
+}
