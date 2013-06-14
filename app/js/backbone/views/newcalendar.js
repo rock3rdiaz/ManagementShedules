@@ -6,7 +6,6 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 
 	//template: _.template( $("#tpl_calendar").html() ),
 	template: swig.compile( $("#tpl_newcalendar").html() ),
-	template_error: swig.compile( $("#tpl_msg-error").html() ),
 	//template: swig.compileFile($("#tpl_calendar")),
 
 	events: {
@@ -47,7 +46,7 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 
 			this.delDates();//Limpiamos los datos del los controles html	
 
-			this.renderMsg('success', 'Ha ocurrido un error con las fechas a iCalendario almacenado con exito :)', '');			
+			this.renderMsg('success', 'Calendario almacenado con exito :)', '');			
 		}
 		else{
 			this.renderMsg('error', 'Ha ocurrido un error con las fechas a introducir. Por favor verifique :(', '');			

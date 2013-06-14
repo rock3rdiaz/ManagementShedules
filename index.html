@@ -141,6 +141,7 @@
 					<td>{{ calendar.initial_date }}</td>
 					<td>{{ calendar.end_date }}</td>
 					<td>{{ calendar.state }}</td>
+					<td><button id="{{ calendar.cid }}_del" class="allcalendars_btn-del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button><button id="{{ calendar.cid }}" class="allcalendars_btn-update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button></td>				
 				</tr>
 				{% endfor %}
 			</tbody>

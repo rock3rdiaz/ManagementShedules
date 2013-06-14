@@ -1,15 +1,14 @@
 App.Views.AllCalendarsView = Backbone.View.extend({
 
 	events: {
-
+		'click .allcalendars_btn-del': 'removeCalendar',
 	},
 
 	template: swig.compile( $("#tpl_allcalendars").html() ),
-	template_error: swig.compile( $("#tpl_msg-empty").html() ),
 
 	initialize: function(){
 
-		console.info('New all calendars view ...');	
+		console.info('New all calendars view ...');
 	},
 
 	render: function(){
@@ -20,6 +19,7 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 
 			window.collections.calendar_list.models.forEach(function(model){
 				var _model = model.toJSON();
+				_model.cid = model.cid;
 				list_models.push(_model);
 			});
 	
@@ -34,7 +34,13 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 				msg: ':\'(',
 				submsg: 'Sin calendarios',
 			});
-		}
+		}		
 	},
 
+	removeCalendar: function(element){		
+		//console.log(element.currentTarget.id);
+		var _model = window.collections.calendar_list.get((element.currentTarget.id).split("_", 1));
+		window.collections.calendar_list.remove(_model);
+		
+	},
 });
