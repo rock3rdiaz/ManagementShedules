@@ -35,5 +35,6 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 				submsg: 'Sin calendarios',
 			});
 		}
-	}
+	},
+
 });

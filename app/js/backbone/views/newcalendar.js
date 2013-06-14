@@ -47,24 +47,35 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 
 			this.delDates();//Limpiamos los datos del los controles html	
 
-			window.views.msgview = new App.Views.MsgView({
-				type_msg: 'success',
-				msg: 'El calendario se ha almacenado exitosamente :)',
-				submsg: '',
-			});
+			this.renderMsg('success', 'Ha ocurrido un error con las fechas a iCalendario almacenado con exito :)', '');			
 		}
-		else{		
-
-			//Nullify Pattern	
-			this.model = null;
-
-			window.views.msgview = new App.Views.MsgView({
-				type_msg: 'error',
-				msg: 'Ha ocurrido un error con las fechas a introducir. Por favor verifique :(',
-				submsg: '',
-			});
+		else{
+			this.renderMsg('error', 'Ha ocurrido un error con las fechas a introducir. Por favor verifique :(', '');			
 		}
+
+		/*delete this.model;
+		delete window.views.msgview;*/
 		
+	},
+
+	renderMsg: function(type_msg, msg, submsg){
+
+		if(type_msg == 'error'){
+			window.views.msgview = new App.Views.MsgView({
+				type_msg: type_msg,
+				msg: msg,
+				submsg: submsg,
+			});
+		}
+		else{
+			window.views.msgview = new App.Views.MsgView({
+				type_msg: type_msg,
+				msg: msg,
+				submsg: submsg,
+			});
+		}
+
+		window.views.msgview.fadeOutMsg();
 	},
 
 	bindDatePicker: function(){

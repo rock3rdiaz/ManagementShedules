@@ -41,6 +41,12 @@ App.Views.MsgView = Backbone.View.extend({
 		else{
 			$("body").find("#contenido_msg").html(this.$el.append(msg));
 		}		
+	},
+
+	fadeOutMsg: function(){
+		this.$el.fadeOut(4000, function(){
+			$(this).html('');
+		})
 	}
 
 });
