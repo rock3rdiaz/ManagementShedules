@@ -13,7 +13,7 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 
 	render: function(){
 
-		if( window.collections.calendar_list != undefined && window.collections.calendar_list.length > 0 ){
+		if( !_.isUndefined(window.collections.calendar_list) && _.size(window.collections.calendar_list) > 0 ){
 			
 			var list_models = new Array();
 

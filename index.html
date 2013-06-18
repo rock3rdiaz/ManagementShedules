@@ -11,6 +11,7 @@
 	
 	<script type="text/javascript" src="app/js/vendors/jquery-2.0.2.js"></script>
 	<script type="text/javascript" src="app/js/vendors/jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript" src="app/js/vendors/datetimepicker.js"></script>
 	<script type="text/javascript" src="app/js/vendors/underscore.js"></script>
 	<script type="text/javascript" src="app/js/vendors/swig.pack.min.js"></script>	
 	<script type="text/javascript" src="app/js/vendors/backbone.js"></script>	
@@ -48,7 +49,7 @@
 			  <li class="dropdown">
 			    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actividades ofrecidas<b class="caret"></b></a>
 			    <ul class="dropdown-menu">
-			    	<li><a href="#">Agregar Actividad</a></li>
+			    	<li><a href="#new_activity">Agregar Actividad</a></li>
 			    	<li><a href="#">Ver todas las actividades</a></li>
 			    </ul>
 			  </li>
@@ -122,6 +123,88 @@
 		</div>
 	</script>
 
+	<script type="text/template" id="tpl_newschedule">	
+		<div class="well row-schedule">	
+			<span class="label label-info lead">Horario asociado a la actividad actual</span>	
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span3">
+							<label for="day">Dia</label>
+							<select id="days">
+								<option value="lunes">Lunes</option>
+								<option value="martes">Martes</option>
+								<option value="miercoles">Miercoles</option>
+								<option value="jueves">Jueves</option>
+								<option value="viernes">Viernes</option>
+								<option value="sabado">Sabado</option>
+								<option value="domingo">Domingo</option>
+							<select>
+						</div>
+			
+						<div class="span3">
+							<label for="initial_hour">Hora de inicio</label>
+							<input id="initial_hour" type="text" class="txt_hours"/>
+						</div>
+			
+						<div class="span3">
+							<label for="end_hour">Hora de finalizacion</label>
+							<input id="end_hour" type="text" class="txt_hours" />
+						</div>
+
+						<div class="span3">
+							<label for="btn_del_schedule">>.<</label>
+							<button class="btn_del_schedule btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="tpl_newactivity">	
+		<div class="well">
+			<h3 class="text-center">Nueva Actividad</h3>
+		</div>
+		<div clasS="well">
+			<span class="label label-info lead">Datos de la actividad</span>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span2">
+							<label for="initial_date">Tipo</label>
+							<select id="type" class="span12">
+								<option value="null">--</option>
+								<option value="cg">Clase grupal</option>
+								<option value="se">Servicio empresarial</option>
+							</select>
+						</div>
+			
+						<div class="span7">
+							<label for="description">Descripci&oacute;n</label>
+							<input id="description" type="text" class="span12"/>
+						</div>
+			
+						<div class="span3">
+							<label for="state">Lugar</label>
+							<input id="place" type="text" class="span12"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span6">
+							<button id="btn_add_schedule" class="btn btn-info">Adicionar horario</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+
 	<script type="text/template" id="tpl_allcalendars">
 		<div class="well">
 			<h3 class="text-center">Todos los calendarios</h3>
@@ -164,8 +247,12 @@
 	<script type="text/javascript" src="app/js/backbone/views/newcalendar.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/allcalendars.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/msgs.js"></script>
+	<script type="text/javascript" src="app/js/backbone/views/newactivity.js"></script>
+	<script type="text/javascript" src="app/js/backbone/views/newschedule.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/calendar.js"></script>
+	<script type="text/javascript" src="app/js/backbone/models/schedule.js"></script>
 	<script type="text/javascript" src="app/js/backbone/collections/calendarlist.js"></script>
+	<script type="text/javascript" src="app/js/backbone/collections/schedules.js"></script>
 	<script type="text/javascript" src="app/js/main.js"></script>
 </body>
 </html>

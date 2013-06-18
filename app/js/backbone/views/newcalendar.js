@@ -58,22 +58,13 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 	},
 
 	renderMsg: function(type_msg, msg, submsg){
-
-		if(type_msg == 'error'){
-			window.views.msgview = new App.Views.MsgView({
-				type_msg: type_msg,
-				msg: msg,
-				submsg: submsg,
-			});
-		}
-		else{
-			window.views.msgview = new App.Views.MsgView({
-				type_msg: type_msg,
-				msg: msg,
-				submsg: submsg,
-			});
-		}
-
+			
+		window.views.msgview = new App.Views.MsgView({
+			type_msg: type_msg,
+			msg: msg,
+			submsg: submsg,
+		});
+		
 		window.views.msgview.fadeOutMsg();
 	},
 

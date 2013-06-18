@@ -5,6 +5,7 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 		'': 'root',
 		'new_calendar': 'newCalendar',
 		'all_calendars': 'allCalendars',
+		'new_activity': 'newActivity',
 	},
 	
 	initialize: function(){
@@ -35,6 +36,16 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 		});
 
 		window.views.allcalendars.render();
+	},
+
+	newActivity: function(){
+
+		window.views.newactivity = window.views.newactivity || new App.Views.NewActivityView({
+
+			el: $("body").find("#contenido_dinamico"), 
+		});
+
+		window.views.newactivity.render();
 	}
 
 });

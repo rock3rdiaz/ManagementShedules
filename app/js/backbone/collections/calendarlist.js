@@ -15,5 +15,5 @@ App.Collections.CalendarList = Backbone.Collection.extend({
 			console.info('Model ' +model.cid+ ' removed ...');
 			window.views.allcalendars.render();
 		});
-	}
+	},
 });
