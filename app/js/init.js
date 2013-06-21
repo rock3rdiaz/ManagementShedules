@@ -5,7 +5,7 @@ App.Views = {};
 App.Routers = {};
 App.Collections = {};
 App.Utils = {
-	time_interval: '00:30:00',
+	time_interval: '01:00',
 };
 
 window.models = {};

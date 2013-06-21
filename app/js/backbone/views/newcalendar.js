@@ -10,7 +10,7 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 
 	events: {
 		'click #btn_del': 'delDates',
-		'click #btn_add': 'addCalendar',
+		'click #btn_add': 'saveCalendar',
 		'focus .txt_dates': 'bindDatePicker',
 	},
 
@@ -18,6 +18,7 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 
 		console.info('New new calendar view ...');
 		this.el = config.el;
+		this.model = config.model;
 	},	
 
 	render: function(){		
@@ -25,9 +26,7 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 		this.$el.html(this.template());		
 	},
 
-	addCalendar: function(){
-
-		this.model = new App.Models.CalendarModel();
+	saveCalendar: function(){
 
 		this.model.set(
 			{
@@ -41,20 +40,17 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 		);
 
 		if( ! this.model.validationError ){			
-			window.collections.calendar_list = window.collections.calendar_list || new App.Collections.CalendarList();
+			//window.collections.calendar_list = window.collections.calendar_list || new App.Collections.CalendarList();
 			window.collections.calendar_list.add(this.model);
 
-			this.delDates();//Limpiamos los datos del los controles html	
+			this.model.save();
+			this.delDates();
 
 			this.renderMsg('success', 'Calendario almacenado con exito :)', '');			
 		}
 		else{
 			this.renderMsg('error', 'Ha ocurrido un error con las fechas a introducir. Por favor verifique :(', '');			
-		}
-
-		/*delete this.model;
-		delete window.views.msgview;*/
-		
+		}		
 	},
 
 	renderMsg: function(type_msg, msg, submsg){
@@ -66,6 +62,8 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 		});
 		
 		window.views.msgview.fadeOutMsg();
+
+		delete window.views.msgview;
 	},
 
 	bindDatePicker: function(){

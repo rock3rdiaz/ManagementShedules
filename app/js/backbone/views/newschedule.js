@@ -14,7 +14,7 @@ App.Views.NewScheduleView = Backbone.View.extend({
 	delSchedule: function(event){
 
 		var _parents = $(event.currentTarget).parents().get(4);
-		_parents.remove();
+		$(_parents).remove();
 	},
 
 	bindTimePicker: function(event){
@@ -25,14 +25,12 @@ App.Views.NewScheduleView = Backbone.View.extend({
 			minuteText: 'Minutos',
 			currentText: 'Ahora',
 			closeText: 'Ok',
-			timeFormat: "hh:mm tt",
 		});
 	},
 
-	initialize: function(config){
+	initialize: function(){
 
 		console.info('New schedule view started');
-		this.el = config.el;
 
 		this.render();
 	},

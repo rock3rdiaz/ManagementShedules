@@ -26,15 +26,15 @@ App.Views.MsgView = Backbone.View.extend({
 				break;
 		}
 
-		this.render(config.type_msg, config.msg);
+		this.render(config.type_msg, config.msg, config.submsg);
 	},
 
-	render: function(type, msg){
+	render: function(type, msg, submsg){
 		if(type == 'empty'){
 
 			this.$el.html( this.template_msg_empty({
 				msg: ':\'(',
-				submsg: 'Sin calendarios',
+				submsg: submsg,
 			}));
 
 		}

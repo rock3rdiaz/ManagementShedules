@@ -1,13 +1,14 @@
-App.Collections.SchedulesList = Backbone.Collection.extend({
+App.Collections.ActivitiesList = Backbone.Collection.extend({
 
-	model: App.Models.ScheduleModel, 	
+	model: App.Models.ActivityModel,	
 
 	initialize: function(){
 
-		console.info('Schedules list started ...');
+		console.info('Activivies list started ...');
 
 		this.on('add', function(model){
-			console.info('Model ' +model.cid+ ' added ...');			
+			console.info('Model ' +model.cid+ ' added ...');
+			
 		});
 
 		this.on('remove', function(model){

@@ -4,7 +4,7 @@ App.Models.CalendarModel = Backbone.Model.extend({
  	
  		initial_date: '',
  		end_date: '',
- 		state: ''
+ 		state: '',
 	},
 
 	validate: function(attrs){

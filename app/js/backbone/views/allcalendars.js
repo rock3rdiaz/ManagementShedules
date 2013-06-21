@@ -13,7 +13,7 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 
 	render: function(){
 
-		if( !_.isUndefined(window.collections.calendar_list) && _.size(window.collections.calendar_list) > 0 ){
+		if( _.size(window.collections.calendar_list) > 0 ){
 			
 			var list_models = new Array();
 
@@ -41,6 +41,5 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 		//console.log(element.currentTarget.id);
 		var _model = window.collections.calendar_list.get((element.currentTarget.id).split("_", 1));
 		window.collections.calendar_list.remove(_model);
-		
 	},
 });

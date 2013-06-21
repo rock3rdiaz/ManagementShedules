@@ -50,7 +50,7 @@
 			    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actividades ofrecidas<b class="caret"></b></a>
 			    <ul class="dropdown-menu">
 			    	<li><a href="#new_activity">Agregar Actividad</a></li>
-			    	<li><a href="#">Ver todas las actividades</a></li>
+			    	<li><a href="#all_activities">Ver todas las actividades</a></li>
 			    </ul>
 			  </li>
 
@@ -125,13 +125,13 @@
 
 	<script type="text/template" id="tpl_newschedule">	
 		<div class="well row-schedule">	
-			<span class="label label-info lead">Horario asociado a la actividad actual</span>	
+			<span class="label label-info lead">Nuevo horario</span>	
 			<div class="row-fluid">
 				<div class="span12">
 					<div class="row-fluid">
 						<div class="span3">
 							<label for="day">Dia</label>
-							<select id="days">
+							<select name="days[]">
 								<option value="lunes">Lunes</option>
 								<option value="martes">Martes</option>
 								<option value="miercoles">Miercoles</option>
@@ -144,12 +144,12 @@
 			
 						<div class="span3">
 							<label for="initial_hour">Hora de inicio</label>
-							<input id="initial_hour" type="text" class="txt_hours"/>
+							<input name="initial_hours[]" type="text" class="txt_hours"/>
 						</div>
 			
 						<div class="span3">
 							<label for="end_hour">Hora de finalizacion</label>
-							<input id="end_hour" type="text" class="txt_hours" />
+							<input name="end_hours[]" type="text" class="txt_hours" />
 						</div>
 
 						<div class="span3">
@@ -172,22 +172,22 @@
 				<div class="span12">
 					<div class="row-fluid">
 						<div class="span2">
-							<label for="initial_date">Tipo</label>
-							<select id="type" class="span12">
-								<option value="null">--</option>
+							<label for="activity_type">Tipo</label>
+							<select id="activity_type" class="span12">
+								<option value="">--</option>
 								<option value="cg">Clase grupal</option>
 								<option value="se">Servicio empresarial</option>
 							</select>
 						</div>
 			
 						<div class="span7">
-							<label for="description">Descripci&oacute;n</label>
-							<input id="description" type="text" class="span12"/>
+							<label for="activity_description">Descripci&oacute;n</label>
+							<input id="activity_description" type="text" class="span12 txt_data"/>
 						</div>
 			
 						<div class="span3">
-							<label for="state">Lugar</label>
-							<input id="place" type="text" class="span12"/>
+							<label for="activity_place">Lugar</label>
+							<input id="activity_place" type="text" class="span12 txt_data"/>
 						</div>
 					</div>
 				</div>
@@ -196,8 +196,9 @@
 			<div class="row-fluid">
 				<div class="span12">
 					<div class="row-fluid">
-						<div class="span6">
-							<button id="btn_add_schedule" class="btn btn-info">Adicionar horario</button>
+						<div class="span6">			
+							<button id="btn_add_schedule" class="btn btn-info"><i class="icon-plus icon-white"></i></button>			
+							<button id="btn_save_activity" class="btn btn-success"><i class="icon-ok icon-white"></i></button>
 						</div>
 					</div>
 				</div>
@@ -224,7 +225,32 @@
 					<td>{{ calendar.initial_date }}</td>
 					<td>{{ calendar.end_date }}</td>
 					<td>{{ calendar.state }}</td>
-					<td><button id="{{ calendar.cid }}_del" class="allcalendars_btn-del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button><button id="{{ calendar.cid }}" class="allcalendars_btn-update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button></td>				
+					<td><button id="{{ calendar.cid }}_del" class="allcalendars_btn-del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button><button id="{{ calendar.cid }}_update" class="allcalendars_btn-update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button></td>				
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</script>
+
+	<script type="text/template" id="tpl_allactivities">
+		<div class="well">
+			<h3 class="text-center">Todas las actividades</h3>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Tipo</th>
+					<th>Descripcion</th>
+					<th>Lugar</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for activity in activities %}
+				<tr>
+					<td>{{ activity.type }}</td>
+					<td>{{ activity.description }}</td>
+					<td>{{ activity.place }}</td>
+					<td><button id="{{ activity.cid }}_del" class="allactivities_btn_del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button><button id="{{ activity.cid }}_update" class="allactivities_btn_update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button></td>				
 				</tr>
 				{% endfor %}
 			</tbody>
@@ -246,13 +272,16 @@
 	<script type="text/javascript" src="app/js/backbone/routers/navbar.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/newcalendar.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/allcalendars.js"></script>
+	<script type="text/javascript" src="app/js/backbone/views/allactivities.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/msgs.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/newactivity.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/newschedule.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/calendar.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/schedule.js"></script>
+	<script type="text/javascript" src="app/js/backbone/models/activity.js"></script>
 	<script type="text/javascript" src="app/js/backbone/collections/calendarlist.js"></script>
 	<script type="text/javascript" src="app/js/backbone/collections/schedules.js"></script>
+	<script type="text/javascript" src="app/js/backbone/collections/activities.js"></script>
 	<script type="text/javascript" src="app/js/main.js"></script>
 </body>
 </html>
