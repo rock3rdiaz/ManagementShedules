@@ -7,6 +7,8 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 		'all_calendars': 'allCalendars',
 		'new_activity': 'newActivity',
 		'all_activities': 'allActivities',
+		'new_turn': 'newTurn',
+		'new_programming': 'newProgramming'
 	},
 	
 	initialize: function(){
@@ -59,6 +61,26 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 		});
 
 		window.views.allactivities.render();
+	},
+
+	newTurn: function(){
+
+		window.views.newturn = window.views.newturn || new App.Views.NewTurnView({
+
+			el: $("body").find("#contenido_dinamico"), 
+		});
+
+		window.views.newturn.render();
+	},
+
+	newProgramming: function(){
+
+		window.views.newprogramming = window.views.newprogramming || new App.Views.NewProgrammingView({
+
+			el: $("body").find("#contenido_dinamico"), 
+		});
+
+		window.views.newprogramming.render();		
 	}
 
 });

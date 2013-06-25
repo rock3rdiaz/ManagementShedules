@@ -9,8 +9,6 @@ $(function(){
 		success: function(data){
 			window.routers = new App.Routers.NavBarRouter();
 			Backbone.history.start();
-
-			console.info(data);
 		}
 	});
 	

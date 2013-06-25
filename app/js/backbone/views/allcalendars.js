@@ -22,6 +22,8 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 				_model.cid = model.cid;
 				list_models.push(_model);
 			});
+
+			window.list_calendars = list_models;
 	
 			this.$el.html( this.template({
 				calendars: list_models

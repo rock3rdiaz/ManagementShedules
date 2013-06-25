@@ -57,15 +57,15 @@
 			  <li class="dropdown">
 			    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Turnos funcionarios<b class="caret"></b></a>
 			    <ul class="dropdown-menu">
-			    	<li><a href="#">Agregar turno</a></li>
-			    	<li><a href="#">Ver todos los turnos</a></li>
+			    	<li><a href="#new_turn">Agregar turno</a></li>
+			    	<li><a href="#all_turns">Ver todos los turnos</a></li>
 			    </ul>
 			  </li>
 
 			   <li class="dropdown">
 			    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programacion de servicios<b class="caret"></b></a>
 			    <ul class="dropdown-menu">
-			    	<li><a href="#">Nueva programacion</a></li>
+			    	<li><a href="#new_programming">Nueva programacion</a></li>
 			    	<li><a href="#">Ver todas las programaciones</a></li>
 			    </ul>
 			  </li>
@@ -75,6 +75,58 @@
 		  </div>
 		</div>
 	</nav>
+
+	<script type="text/template" id="tpl_newprogramming">
+		<div class="well">
+			<h3 class="text-center">Nueva programaci&oacute;n</h3>
+		</div>
+
+		<div class="well">
+			<span class="label label-info lead">Vigencia de la programacion</span>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span6">
+							<label for="programming_initial_date">Fecha de inicio</label>
+							<input id="programming_initial_date" type="text" value="{{ initial_date }}"/>
+						</div>
+			
+						<div class="span6">
+							<label for="programming_end_date">Fecha de finalizaci&oacute;n</label>
+							<input id="programming_end_date" type="text" value="{{ end_date }}"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="well">
+			<span class="label label-info lead">Instructor a programar y turno asociado</span>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span6">
+							<label for="programming_instructors">Nombre del instructor</label>
+							<select name="programming_instructors">
+								{% for instructor in instructors %}							
+									<option value="{{ instructor.id }}">{{ instructor.name }}</option>	
+								{% endfor %}
+							</select>
+						</div>
+
+						<div class="span6">
+							<label for="programming_turns">Turno</label>
+							<select name="programming_turns">
+								{% for turn in turns %}							
+									<option value="{{ turn.id }}">{{ turn.name }}</option>	
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
 
 	<script type="text/template" id="tpl_msg-empty">
 		<div class="hero-unit">
@@ -119,6 +171,36 @@
 						<button id="btn_del" class="btn btn-info">Del</button>
 					</div>
 				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="tpl_newturn">	
+		<div class="well">
+			<h3 class="text-center">Nuevo Turno</h3>
+		</div>
+		<div class="well">
+			<span class="label label-info lead">Datos del turno</span>	
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span12">
+							<label for="turn_name">Nombre</label>
+							<input id="turn_name" type="text" class="span12"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span6">			
+							<button id="turn_btn_add_schedule" class="btn btn-info"><i class="icon-plus icon-white"></i></button>			
+							<button id="turn_btn_save" class="btn btn-success"><i class="icon-ok icon-white"></i></button>
+						</div>
+					</div>
+				</div>			
 			</div>
 		</div>
 	</script>
@@ -276,6 +358,8 @@
 	<script type="text/javascript" src="app/js/backbone/views/msgs.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/newactivity.js"></script>
 	<script type="text/javascript" src="app/js/backbone/views/newschedule.js"></script>
+	<script type="text/javascript" src="app/js/backbone/views/newturn.js"></script>
+	<script type="text/javascript" src="app/js/backbone/views/newprogramming.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/calendar.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/schedule.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/activity.js"></script>

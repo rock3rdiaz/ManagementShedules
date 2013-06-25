@@ -5,13 +5,12 @@ namespace models;
 require_once('../core/ManagementBD.php');
 require_once('../core/Helper.php');
 
-class Calendar extends \core\ManagementBD{
+class Turn extends \core\ManagementBD{
 
-	const TABLE_NAME = 'calendar';
+	const TABLE_NAME = 'turn';
 
-	private $initial_date;
-	private $end_date;
-	private $state;
+	private $name;
+	private $total_hours;
 
 	public function __construct(){	
 		parent::__construct('mysql');
@@ -30,9 +29,9 @@ class Calendar extends \core\ManagementBD{
 		return $res;
 	}
 
-	public function insert($id, $ed, $state){
+	public function insert($name, $total_hours){
 
-		$sql = "INSERT INTO ".self::TABLE_NAME." (initial_date, end_date, state) VALUES ('$id', '$ed', '$state')";
+		$sql = "INSERT INTO ".self::TABLE_NAME." (name, total_hours) VALUES ('$name', '$total_hours')";
 		$res = $this->connect()->query($sql);
 		$this->disconnect();
 	}
@@ -44,9 +43,9 @@ class Calendar extends \core\ManagementBD{
 		$this->disconnect();
 	}
 
-	public function update($id, $initial_date, $end_date, $state){
+	public function update($name, $total_hours){
 
-		$sql = "UPDATE ".self::TABLE_NAME." SET initial_date = '$initial_date', end_date = '$end_date', state = '$state'";
+		$sql = "UPDATE ".self::TABLE_NAME." SET name = '$name', total_hours = '$total_hours'";
 
 		$res = $this->connect()->query($sql);
 		$this->disconnect();
@@ -59,16 +58,15 @@ switch($_SERVER['REQUEST_METHOD']){
 	case 'GET':
 		$data = \core\Helper::dJSON(file_get_contents('php://input'));
 
-		$calendar = new Calendar();
-		$res = $calendar->selectAll();
+		$instructor = new Turn();
+		$res = $turn->selectAll();
 
 		$data = array();
 		while ($fila = $res->fetch_assoc()) {
-			$item["id"]           = $fila['id'];
-			$item["initial_date"] = $fila['initial_date'];
-			$item["end_date"]     = $fila['end_date'];
-			$item["state"]        = $fila['state'];
-			$data[]               = $item;
+			$item["id"]   = $fila['id'];
+			$item["name"] = $fila['name'];
+			$item["total_hours"] = $fila['total_hours'];
+			$data[]       = $item;
 		}
 		print_r(\core\Helper::eJSON($data));
 
@@ -76,8 +74,8 @@ switch($_SERVER['REQUEST_METHOD']){
 
 	case 'POST':
 		$data = \core\Helper::dJSON(file_get_contents('php://input'));
-		$calendar = new Calendar();
-		$calendar->insert($data->initial_date, $data->end_date, $data->state);
+		$turn = new Turn();
+		$turn->insert($data->name, $data->total_hours);
 
 		break;
 
@@ -86,9 +84,8 @@ switch($_SERVER['REQUEST_METHOD']){
 
 	case 'DELETE':
 		$id = $_REQUEST['cid'];
-		$calendar = new Calendar();
-		$res = $calendar->delete($id);
-		echo "desde delete";
+		$turn = new Turn();
+		$res = $turn->delete($id);
 
 		break;
 }
