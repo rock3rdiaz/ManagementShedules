@@ -1,12 +1,11 @@
-App.Views.NewCalendarioView = Backbone.View.extend({
+App.Views.NewCalendarView = Backbone.View.extend({
 
 	tagName: '',
 	className: '',
 	id: '',
 
 	//template: _.template( $("#tpl_calendar").html() ),
-	template: swig.compile( $("#tpl_newcalendar").html() ),
-	//template: swig.compileFile($("#tpl_calendar")),
+	template: swig.compile( $("#tpl_newcalendar").html() ),	
 
 	events: {
 		'click #btn_del': 'delDates',
@@ -18,7 +17,6 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 
 		console.info('New new calendar view ...');
 		this.el = config.el;
-		this.model = config.model;
 	},	
 
 	render: function(){		
@@ -28,7 +26,9 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 
 	saveCalendar: function(){
 
-		this.model.set(
+		window.model = new App.Models.CalendarModel();
+
+		model.set(
 			{
 				initial_date: this.$el.find("#initial_date").val(),
 				end_date: this.$el.find("#end_date").val(),
@@ -39,11 +39,9 @@ App.Views.NewCalendarioView = Backbone.View.extend({
 			}
 		);
 
-		if( ! this.model.validationError ){			
-			//window.collections.calendar_list = window.collections.calendar_list || new App.Collections.CalendarList();
-			window.collections.calendar_list.add(this.model);
+		if( model.isValid() ){
 
-			this.model.save();
+			window.collections.calendar_list.add(model);			
 			this.delDates();
 
 			this.renderMsg('success', 'Calendario almacenado con exito :)', '');			

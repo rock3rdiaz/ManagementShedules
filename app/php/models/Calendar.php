@@ -57,7 +57,6 @@ class Calendar extends \core\ManagementBD{
 switch($_SERVER['REQUEST_METHOD']){
 
 	case 'GET':
-		$data = \core\Helper::dJSON(file_get_contents('php://input'));
 
 		$calendar = new Calendar();
 		$res = $calendar->selectAll();
@@ -76,6 +75,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
 	case 'POST':
 		$data = \core\Helper::dJSON(file_get_contents('php://input'));
+		
 		$calendar = new Calendar();
 		$calendar->insert($data->initial_date, $data->end_date, $data->state);
 
@@ -85,10 +85,15 @@ switch($_SERVER['REQUEST_METHOD']){
 		break;
 
 	case 'DELETE':
-		$id = $_REQUEST['cid'];
+		
+		$data = $_SERVER['REQUEST_URI'];
+		preg_match('/(\d+)/', $data, $match);
+		$id = $match[0];
+
 		$calendar = new Calendar();
 		$res = $calendar->delete($id);
-		echo "desde delete";
 
+		print_r(\core\Helper::eJSON($id));
+		
 		break;
 }

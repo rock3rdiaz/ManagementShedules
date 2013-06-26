@@ -154,7 +154,7 @@
 		
 					<div class="span4">
 						<label for="state">Estado</label>
-						<input id="state" type="text" value="activo" disabled/>
+						<input id="state" type="text" value="Activo" disabled/>
 					</div>
 				</div>
 			</div>
@@ -303,11 +303,12 @@
 			</thead>
 			<tbody>
 				{% for calendar in calendars %}
-				<tr>
+				<tr>					
 					<td>{{ calendar.initial_date }}</td>
 					<td>{{ calendar.end_date }}</td>
 					<td>{{ calendar.state }}</td>
-					<td><button id="{{ calendar.cid }}_del" class="allcalendars_btn-del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button><button id="{{ calendar.cid }}_update" class="allcalendars_btn-update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button></td>				
+					<td><button name="del" id="{{ calendar.id }}_del" class="allcalendars_btn-del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button>
+						<button name="update" id="{{ calendar.id }}_update" class="allcalendars_btn-update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button></td>				
 				</tr>
 				{% endfor %}
 			</tbody>
@@ -363,9 +364,14 @@
 	<script type="text/javascript" src="app/js/backbone/models/calendar.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/schedule.js"></script>
 	<script type="text/javascript" src="app/js/backbone/models/activity.js"></script>
-	<script type="text/javascript" src="app/js/backbone/collections/calendarlist.js"></script>
+	<script type="text/javascript" src="app/js/backbone/models/instructor.js"></script>
+	<script type="text/javascript" src="app/js/backbone/models/turn.js"></script>
+	<script type="text/javascript" src="app/js/backbone/models/programming.js"></script>
+	<script type="text/javascript" src="app/js/backbone/collections/calendars.js"></script>	
 	<script type="text/javascript" src="app/js/backbone/collections/schedules.js"></script>
 	<script type="text/javascript" src="app/js/backbone/collections/activities.js"></script>
+	<script type="text/javascript" src="app/js/backbone/collections/instructors.js"></script>
+	<script type="text/javascript" src="app/js/backbone/collections/programmings.js"></script>
 	<script type="text/javascript" src="app/js/main.js"></script>
 </body>
 </html>

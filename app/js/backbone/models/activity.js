@@ -1,9 +1,6 @@
 App.Models.ActivityModel = Backbone.Model.extend({
 
-	//url: 'app/php/models/activity.php',
-
-	defaults: {
- 	
+	defaults: { 	
  		type: '',
  		description: '',
  		place: ''

@@ -1,7 +1,10 @@
 App.Views.AllCalendarsView = Backbone.View.extend({
 
 	events: {
-		'click .allcalendars_btn-del': 'removeCalendar',
+		'click .allcalendars_btn-del': 'removeCalendar',		
+		'click .allcalendars_btn-update': 'updateCalendar',		
+		'mouseover .allcalendars_btn-del': 'showTooltip',
+		'mouseover .allcalendars_btn-update': 'showTooltip'		
 	},
 
 	template: swig.compile( $("#tpl_allcalendars").html() ),
@@ -9,6 +12,25 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 	initialize: function(){
 
 		console.info('New all calendars view ...');
+	},
+
+	updateCalendar: function(event){
+
+		
+	},
+
+	showTooltip: function(event){
+
+		if(event.currentTarget.name == 'del'){
+			var _title = 'Eliminar';
+		}
+		else{
+			var _title = 'Actualizar';
+		}
+
+		$(event.currentTarget).tooltip({
+			title: _title,
+		});
 	},
 
 	render: function(){
@@ -19,7 +41,7 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 
 			window.collections.calendar_list.models.forEach(function(model){
 				var _model = model.toJSON();
-				_model.cid = model.cid;
+				_model.id = model.id;
 				list_models.push(_model);
 			});
 
@@ -39,9 +61,12 @@ App.Views.AllCalendarsView = Backbone.View.extend({
 		}		
 	},
 
-	removeCalendar: function(element){		
-		//console.log(element.currentTarget.id);
-		var _model = window.collections.calendar_list.get((element.currentTarget.id).split("_", 1));
-		window.collections.calendar_list.remove(_model);
+	removeCalendar: function(event){	
+
+		var _model = window.collections.calendar_list.get((event.currentTarget.id).split("_", 1));
+
+		if(confirm('Esta seguro de eliminar este elemento?')){
+			window.collections.calendar_list.remove(_model);
+		}
 	},
 });

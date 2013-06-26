@@ -8,7 +8,7 @@ App.Models.CalendarModel = Backbone.Model.extend({
 	},
 
 	validate: function(attrs){
-		if(attrs.initial_date == '' || attrs.end_date == ''){
+		if(attrs.initial_date == '' || attrs.end_date == '' || (attrs.initial_date > attrs.end_date)){
 			return "Existen problemas en las fechas";
 		}
 	},
@@ -17,8 +17,8 @@ App.Models.CalendarModel = Backbone.Model.extend({
 		var self = this;
 		console.info('New calendar model ...');
 		
-		this.on('invalid', function(model, msg){
+		/*this.on('invalid', function(model, msg){
 			self.validationError = true;
-		});
+		});*/
 	},
 });

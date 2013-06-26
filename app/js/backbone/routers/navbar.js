@@ -23,10 +23,9 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 
 	newCalendar: function(){
 
-		window.views.newcalendar = window.views.newcalendar || new App.Views.NewCalendarioView({
+		window.views.newcalendar = window.views.newcalendar || new App.Views.NewCalendarView({
 
 			el: $("body").find("#contenido_dinamico"),
-			model: new App.Models.CalendarModel(),
 		});
 
 		window.views.newcalendar.render();
@@ -68,6 +67,7 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 		window.views.newturn = window.views.newturn || new App.Views.NewTurnView({
 
 			el: $("body").find("#contenido_dinamico"), 
+			model: new App.Models.TurnModel(),
 		});
 
 		window.views.newturn.render();

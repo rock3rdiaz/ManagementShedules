@@ -118,7 +118,7 @@ App.Views.NewActivityView = Backbone.View.extend({
 
 	initialize: function(config){
 
-		console.info('New Activity view started');
+		console.info('New Activity view started ...');
 		this.el = config.el;
 		//this.model = config.model;
 	},
