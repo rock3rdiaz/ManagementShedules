@@ -6,7 +6,11 @@ App.Models.TurnModel = Backbone.Model.extend({
  		total_hours: '',
 	},
 
-	validate: function(attrs){		
+	validate: function(attrs){	
+
+		if(_.isEmpty(attrs.name)){
+			return "El nombre del turno no puede estar vacio";
+		}
 	},
 
 	initialize: function(){		

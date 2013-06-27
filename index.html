@@ -295,6 +295,7 @@
 		<table class="table">
 			<thead>
 				<tr>
+					<th>C&oacute;digo</th>
 					<th>Fecha inicial</th>
 					<th>Fecha final</th>
 					<th>Estado</th>
@@ -303,16 +304,52 @@
 			</thead>
 			<tbody>
 				{% for calendar in calendars %}
-				<tr>					
+				<tr>
+					<td>{{ calendar.id }}</td>					
 					<td>{{ calendar.initial_date }}</td>
 					<td>{{ calendar.end_date }}</td>
 					<td>{{ calendar.state }}</td>
-					<td><button name="del" id="{{ calendar.id }}_del" class="allcalendars_btn-del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button>
-						<button name="update" id="{{ calendar.id }}_update" class="allcalendars_btn-update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button></td>				
+					<td><button id="{{ calendar.id }}_del" class="allcalendars_btn-del btn btn-danger btn-mini"><i class="icon-remove icon-white"></i></button>
+						<!--<button id="{{ calendar.id }}_update" class="allcalendars_btn-update btn btn-info btn-mini"><i class="icon-ok icon-white"></i></button>-->
+						<a id="{{ calendar.id }}_update" href="#myModal" role="button" class="allcalendars_btn-update btn btn-info btn-mini" data-toggle="modal"><i class="icon-ok icon-white"></i></a></td>				
 				</tr>
 				{% endfor %}
 			</tbody>
 		</table>
+		 
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		    <h3 id="myModalLabel">Actualizar calendario</h3>
+		  </div>
+		  <div class="modal-body">
+		    <div class="row-fluid">
+				<div class="span12">
+					<div class="row-fluid">
+						<div class="span4">
+							<label for="initial_date">Fecha de inicio</label>
+							<input id="initial_date" type="text" class="txt_dates span12" value="{{ _calendar.initial_date }}"/>
+						</div>
+			
+						<div class="span4">
+							<label for="end_date">Fecha de finalizaci&oacute;n</label>
+							<input id="end_date" type="text" class="txt_dates span12" value="{{ _calendar.end_date }}"/>
+						</div>
+			
+						<div class="span4">
+							<label for="state">Estado</label>
+							<input id="state" type="text" class="span5" value="Activo" />
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
+		  <div class="modal-footer">
+		    <button id="update_btn_close" class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+		    <button id="update_btn_ok" class="btn btn-primary">Actualizar</button>
+		  </div>
+		</div>
 	</script>
 
 	<script type="text/template" id="tpl_allactivities">
@@ -371,7 +408,8 @@
 	<script type="text/javascript" src="app/js/backbone/collections/schedules.js"></script>
 	<script type="text/javascript" src="app/js/backbone/collections/activities.js"></script>
 	<script type="text/javascript" src="app/js/backbone/collections/instructors.js"></script>
-	<script type="text/javascript" src="app/js/backbone/collections/programmings.js"></script>
+	<script type="text/javascript" src="app/js/backbone/collections/programmings.js"></script>	
+	<script type="text/javascript" src="app/js/backbone/collections/turns.js"></script>
 	<script type="text/javascript" src="app/js/main.js"></script>
 </body>
 </html>

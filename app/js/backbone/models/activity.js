@@ -8,7 +8,7 @@ App.Models.ActivityModel = Backbone.Model.extend({
 
 	validate: function(attrs){
 		if(_.isEmpty(attrs.type) || _.isEmpty(attrs.description) || _.isEmpty(attrs.place)){
-			return "error";
+			return "Existen errores en los datos de la actividad :(";
 		}
 	},
 

@@ -4,6 +4,8 @@ App.Models.ScheduleModel = Backbone.Model.extend({
 		initial_hour: '',
 		end_hour: '',
 		day: '',
+		turn_id: '',
+		activity_id: '',
 	},
 
 	validate: function(attrs){

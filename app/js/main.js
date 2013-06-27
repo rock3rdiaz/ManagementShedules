@@ -3,9 +3,9 @@ $(function(){
 	console.info('App started ...');
 
 	window.collections.calendar_list    = new App.Collections.CalendarList();
-	window.collections.instructors_list = new App.Collections.InstructorsList();	
+	//window.collections.instructors_list = new App.Collections.InstructorsList();	
 	
-	window.collections.instructors_list.fetch();
+	//window.collections.instructors_list.fetch();
 
 	window.collections.calendar_list.fetch({
 		success: function(data){

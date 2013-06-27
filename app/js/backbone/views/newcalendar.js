@@ -26,9 +26,9 @@ App.Views.NewCalendarView = Backbone.View.extend({
 
 	saveCalendar: function(){
 
-		window.model = new App.Models.CalendarModel();
+		var model_calendar = new App.Models.CalendarModel();
 
-		model.set(
+		model_calendar.set(
 			{
 				initial_date: this.$el.find("#initial_date").val(),
 				end_date: this.$el.find("#end_date").val(),
@@ -39,9 +39,9 @@ App.Views.NewCalendarView = Backbone.View.extend({
 			}
 		);
 
-		if( model.isValid() ){
-
-			window.collections.calendar_list.add(model);			
+		if( model_calendar.isValid() ){
+				
+			window.collections.calendar_list.add(model_calendar);			
 			this.delDates();
 
 			this.renderMsg('success', 'Calendario almacenado con exito :)', '');			
@@ -74,6 +74,6 @@ App.Views.NewCalendarView = Backbone.View.extend({
 	},
 
 	delDates: function(){
-		this.$el.find("input.txt_dates").val('');		
+		this.$el.find("input.txt_dates").val('');	
 	}
 });

@@ -28,9 +28,12 @@ App.Views.NewScheduleView = Backbone.View.extend({
 		});
 	},
 
-	initialize: function(){
+	initialize: function(config){
 
 		console.info('New schedule view started');
+
+		this.model = config.model,
+		this.el = config.el;
 
 		this.render();
 	},

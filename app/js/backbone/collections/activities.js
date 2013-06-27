@@ -13,7 +13,6 @@ App.Collections.ActivitiesList = Backbone.Collection.extend({
 
 		this.on('remove', function(model){
 			console.info('Model ' +model.cid+ ' removed ...');
-			window.views.allactivities.render();
 		});
 	},
 });

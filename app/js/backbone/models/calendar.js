@@ -16,9 +16,5 @@ App.Models.CalendarModel = Backbone.Model.extend({
 	initialize: function(){
 		var self = this;
 		console.info('New calendar model ...');
-		
-		/*this.on('invalid', function(model, msg){
-			self.validationError = true;
-		});*/
 	},
 });

@@ -36,7 +36,6 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 		window.views.newactivity = window.views.newactivity || new App.Views.NewActivityView({
 
 			el: $("body").find("#contenido_dinamico"), 
-			model: new App.Models.ActivityModel(),
 		});
 
 		window.views.newactivity.render();
@@ -67,7 +66,6 @@ App.Routers.NavBarRouter = Backbone.Router.extend({
 		window.views.newturn = window.views.newturn || new App.Views.NewTurnView({
 
 			el: $("body").find("#contenido_dinamico"), 
-			model: new App.Models.TurnModel(),
 		});
 
 		window.views.newturn.render();

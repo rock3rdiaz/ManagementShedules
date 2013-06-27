@@ -46,7 +46,7 @@ class Calendar extends \core\ManagementBD{
 
 	public function update($id, $initial_date, $end_date, $state){
 
-		$sql = "UPDATE ".self::TABLE_NAME." SET initial_date = '$initial_date', end_date = '$end_date', state = '$state'";
+		$sql = "UPDATE ".self::TABLE_NAME." SET initial_date = '$initial_date', end_date = '$end_date', state = '$state' WHERE id = '$id'";
 
 		$res = $this->connect()->query($sql);
 		$this->disconnect();
@@ -77,11 +77,20 @@ switch($_SERVER['REQUEST_METHOD']){
 		$data = \core\Helper::dJSON(file_get_contents('php://input'));
 		
 		$calendar = new Calendar();
-		$calendar->insert($data->initial_date, $data->end_date, $data->state);
+		$calendar->insert($data['initial_date'], $data['end_date'], $data['state']);
+
+		print_r(\core\Helper::eJSON($calendar));
 
 		break;
 
 	case 'PUT':
+		$data = \core\Helper::dJSON(file_get_contents('php://input'));
+
+		$calendar = new Calendar();
+		$calendar->update($data['id'], $data['initial_date'], $data['end_date'], $data['state']);
+
+		print_r(\core\Helper::eJSON($calendar));		
+
 		break;
 
 	case 'DELETE':

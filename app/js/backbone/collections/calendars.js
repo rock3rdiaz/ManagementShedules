@@ -11,25 +11,34 @@ App.Collections.CalendarList = Backbone.Collection.extend({
 		console.info('Calendar list started ...');
 
 		this.on('add', function(model){
-			console.info('Model ' +model.cid+ ' added ...');
 
-			if(model.isNew()){
-				self.sync('create', model);
+			if( model.isNew() ){
+
+				console.info('Model ' +model.cid+ ' added ...');
+				//self.sync('create', model);
+				
+				model.save(model.attributes, {
+					success: function(data){
+						console.info('Saved '+data);
+
+						self.fetch({reset: true});							
+					},
+					error: function(data){
+						console.info('Error '+data.responseText);
+					}
+				});			
 			}
-			else{
-				self.sync('read', model);
-			}			
 		});
 
 		this.on('remove', function(model){
-
+			
 			model.destroy({
 				success: function(data){
-					console.log(data);
+					console.log('Model ' + data.id + ' deleted ...');
 					window.views.allcalendars.render();
 				},
 				error: function(data){
-					console.log(data.responseText);
+					console.log('Error ' + data.responseText);
 				}
 			});
 		});
