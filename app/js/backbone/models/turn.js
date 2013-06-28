@@ -16,4 +16,8 @@ App.Models.TurnModel = Backbone.Model.extend({
 	initialize: function(){		
 		console.info('New turn model ...');
 	},
+
+	calcTotalHours: function(){
+		
+	}
 });

@@ -15,7 +15,6 @@ App.Collections.CalendarList = Backbone.Collection.extend({
 			if( model.isNew() ){
 
 				console.info('Model ' +model.cid+ ' added ...');
-				//self.sync('create', model);
 				
 				model.save(model.attributes, {
 					success: function(data){

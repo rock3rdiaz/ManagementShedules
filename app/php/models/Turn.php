@@ -74,6 +74,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
 	case 'POST':
 		$data = \core\Helper::dJSON(file_get_contents('php://input'));
+		
 		$turn = new Turn();
 		$turn->insert($data->name, $data->total_hours);
 

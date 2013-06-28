@@ -1,5 +1,7 @@
 App.Collections.SchedulesList = Backbone.Collection.extend({
 
+	url: 'app/php/models/schedule.php',
+
 	model: App.Models.ScheduleModel, 	
 
 	initialize: function(){
@@ -9,32 +11,35 @@ App.Collections.SchedulesList = Backbone.Collection.extend({
 		console.info('Schedules list started ...');
 
 		this.on('add', function(model){
-			console.info('Model ' +model.cid+ ' added ...');		
 
-			if( model.isNew() )	{
-
-				self.save( model.attributes, {
-					success: function(data){
-						console.info("Saved "+data);
-					},
-					error: function(data){
-						console.info("Error "+data.responseText);
-					}
-				});
-			}
+			console.info('Model ' +model.cid+ ' added ...');	
 		});
 
 		this.on('remove', function(model){
-			console.info('Model ' +model.cid+ ' removed ...');
 
-			model.destroy({
-				success: function(data){
-					console.info("Deleted "+data);
-				},
-				error: function(data){
-					console.info("Error "+data.responseText);
-				}
-			});
+			console.info('Model ' +model.cid+ ' removed ...');
 		});
 	},
+
+	/*saveAllElements: function(){
+
+		Backbone.sync( 'create', this, {
+
+			beforeSend: function(){
+				window.views._ajaxload = new App.Views._AjaxLoadView();			
+			},
+
+			success: function(data){
+				console.info('Saved schedules collection');
+				window.views._ajaxload.remove();
+
+				window.views.newturn.render();
+			},
+
+			error: function(data){
+				console.info('Error ' + data.responseText);
+				window.views._ajaxload.remove();
+			}
+		} );
+	},*/
 });
